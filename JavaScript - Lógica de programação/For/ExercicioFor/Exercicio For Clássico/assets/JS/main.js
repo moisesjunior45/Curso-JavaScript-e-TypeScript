@@ -1,5 +1,5 @@
 const elementos = [
-    {tag: 'p', texto: 'Frase 1'},
+    {tag: 'p', texto: 'Qualquer texto que você quiser'},
     {tag: 'div', texto: 'Frase 2'},
     {tag: 'footer', texto: 'Frase 3'},
     {tag: 'section', texto: 'Frase 4'},
@@ -7,10 +7,15 @@ const elementos = [
 
 const container = document.querySelector('.container');
 const div = document.createElement('div');
-// const p = document.createElement('p');
-// const footer = document.createElement('footer');
-// const section = document.createElement('section');
 
 for (let i = 0; i < elementos.length; i++) {
-    console.log(elementos[i]);
+    let { tag, texto } = elementos[i];
+    let elemento = document.createElement(tag);
+    // elemento.innerText = texto;
+    let textoCriado = document.createTextNode(texto);
+
+    elemento.appendChild(textoCriado);
+    div.appendChild(elemento);
 }
+
+container.appendChild(div);
