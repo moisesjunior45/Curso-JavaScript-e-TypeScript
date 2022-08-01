@@ -17,6 +17,8 @@ function Pessoa(nome, sobrenome) {
     this.nomeCompleto = () => this.nome + ' ' +  this.sobrenome;
 }
 
+Pessoa.prototype.estouAqui = 'Hahahaha'
+
 const pessoa1 = new Pessoa('Luiz', 'O.')    // <- Pessoa = Função construtora
 const data = new Date();    //  <- Date = Função construtora
 
