@@ -1,3 +1,4 @@
+// Promise - Representa a eventual conclusão (ou falha) de uma operação assíncrona e seu valor resultante.
 function rand(min, max) {
     min *= 1000;
     max *= 1000;
