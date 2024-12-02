@@ -1,4 +1,4 @@
-import { HomeModel } from "../models/HomeModel.js";
+import HomeModel from '../models/HomeModel.js';
 
 // Criando dados na collection
 // HomeModel.create({
@@ -9,9 +9,9 @@ import { HomeModel } from "../models/HomeModel.js";
 //   .catch(e => console.log(e));
 
 // Buscando dados do banco
-// HomeModel.find()
-//   .then(dados => console.log(dados))
-//   .catch(e => console.log(e));
+HomeModel.find()
+  .then(dados => console.log(dados))
+  .catch(e => console.log(e));
 
 export function paginaInicial(req, res) {
   res.render('index');
