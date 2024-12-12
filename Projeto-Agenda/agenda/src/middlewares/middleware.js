@@ -1,5 +1,6 @@
 export function middlewareGlobal(req, res, next) {
-  res.locals.umaVariavelLocal = 'Este é o valor da variável local.';
+  res.locals.errors = req.flash("errors");
+  res.locals.success = req.flash("success");
   next();
 }
 
@@ -8,9 +9,11 @@ export function outroMiddleware(req, res, next) {
 }
 
 export function checkCsrfError(err, req, res, next) {
-  if(err && 'EBADCSRFTOKEN' === err.code) {
-    return res.render('404');
+  if (err) {
+    return res.render("404");
   }
+
+  next();
 }
 
 export function csrfMiddleware(req, res, next) {

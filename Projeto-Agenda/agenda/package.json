@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js --ignore public --ignore frontend",
+    "start": "nodemon --no-deprecation server.js --ignore public --ignore frontend",
     "dev": "webpack -w"
   },
   "keywords": [],
@@ -26,7 +26,8 @@
     "mongodb": "^6.11.0",
     "mongoose": "^8.8.3",
     "regenerator-runtime": "^0.13.7",
-    "style-loader": "^2.0.0"
+    "style-loader": "^2.0.0",
+    "validator": "^13.12.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",
